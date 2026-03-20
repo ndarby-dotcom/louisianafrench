@@ -176,3 +176,52 @@ footer a:hover {
   color: #8B5E3C;
   text-decoration-color: #8B5E3C;
 }
+
+
+@media (max-width: 768px) {
+
+  /* Nav bar stacks vertically */
+  .nav-container {
+    flex-direction: column;
+    height: auto;
+    padding: 15px 0;
+    gap: 12px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  /* Hero image shorter on mobile */
+  header {
+    height: 280px;
+  }
+
+  /* Hero text box fits the screen */
+  .hero-text {
+    padding: 20px 24px;
+    margin: 0 16px;
+  }
+
+  /* Smaller heading on mobile */
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Less padding on main content */
+  main {
+    padding: 40px 16px;
+  }
+
+  /* Smaller body text */
+  p, li {
+    font-size: 1.1rem;
+  }
+
+}
