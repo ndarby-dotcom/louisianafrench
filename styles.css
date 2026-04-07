@@ -91,7 +91,7 @@ main {
 	grid-column: 2;
 	margin-left: 40px;
 	padding: 40px 40px 0px 30px;
-  
+	max-width: 70ch;  
 }
 
 
@@ -191,6 +191,40 @@ footer a:hover {
 
 
 @media (max-width: 768px) {
+/* Stack the grid into a single column */
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  /* Move nav, header, sidenav, main, footer to single column */
+  nav, header {
+    grid-column: 1;
+  }
+
+  /* Push sidenav below the header, full width */
+  aside {
+    grid-row: 3;
+    grid-column: 1;
+  }
+
+  main {
+    grid-row: 4;
+    grid-column: 1;
+    margin-left: 0;
+  }
+
+  footer {
+    grid-row: 5;
+    grid-column: 1;
+  }
+
+  /* Make sidenav full width on mobile */
+  .sidenav {
+    width: 100%;
+    margin: 0;
+  }
+
 
   /* Nav bar stacks vertically */
   .nav-container {
