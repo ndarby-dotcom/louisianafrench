@@ -94,8 +94,6 @@ main {
 	max-width: 70ch;  
 }
 
-
-
 h1 {
   font-family: 'Playfair Display', serif;
   color: #2C5F2E;
@@ -108,16 +106,15 @@ h2 {
   font-family: 'Cormorant Garamond', serif;
   color: #2C5F2E;
   font-size: 2rem;
-  margin-bottom: 16px;
-  padding-bottom: 8px;
-  border-bottom: 1px dotted #8B5E3C;
+  margin-bottom: 4px;
+  padding-bottom: 2px;
 }
 
 p {
   font-size: 1.3rem; 
   color:#8B5E3C;
   font-family:lora; 
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 section {
