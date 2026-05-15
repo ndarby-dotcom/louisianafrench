@@ -104,9 +104,9 @@ h1 {
 h2 {
   font-family: 'Cormorant Garamond', serif;
   color: #2C5F2E;
-  font-size: 1.8rem;
   margin-bottom: 4px;
   padding-bottom: 2px;
+  font-size: 1.9rem; 
 }
 
 h3 {
@@ -114,9 +114,19 @@ h3 {
   color: #F5ECD7;
   font-size: 1.3rem;
   font-style: italic;
+  font-weight:bold;
   margin-bottom: 4px;
   text-decoration: underline;
   text-decoration-color: #F5ECD7;
+}
+
+h4 {
+  font-family: 'Lora', serif;
+  color: #8B5E3C;
+  font-size: 1rem;
+  margin-bottom: 4px;
+  text-decoration: underline;
+  text-decoration-color: #8B5E3C;
 }
 
 p {
@@ -236,7 +246,7 @@ footer a:hover {
 	padding-top: 1.25rem;
 	padding-left: 0.75rem;
 	margin-top: 1rem;
-	background:#2C5F2E	
+	background:#2C5F2E;	
 }
 
 
