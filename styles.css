@@ -6,9 +6,33 @@
     padding: 0;
 }
 
+.hero-text {
+  background-color: rgba(245, 236, 215, 0.82);
+  padding: 30px 50px;
+  border-radius: 4px;
+}
+
+.tagline {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #8B5E3C;
+  margin-bottom: 0;
+}
+
+
+
+
+body {
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] minmax(0, 1fr));
+  gap: 20px;
+  height: 100vh;
+	background-color: #F5ECD7;
+}
+
 nav {
 	grid-row: 1;
-	grid-column: 1/3;
+	grid-column: 1/13;
   background-color: #2C5F2E;
   padding: 0 20px;
 }
@@ -44,9 +68,9 @@ margin-bottom: 0}
 
 header {
 	grid-row: 2;
-	grid-column: 1/3;
+	grid-column: 1/13;
   width: 100%;
-  height: 420px;
+  height: 300px;
   background-image: url('assets/images/bayou_header.jpg');
   background-size: cover;
   background-position: center;
@@ -55,49 +79,24 @@ header {
   align-items: center;
   justify-content: center;
   text-align: center;
-}
-
-.hero-text {
-  background-color: rgba(245, 236, 215, 0.82);
-  padding: 30px 50px;
-  border-radius: 4px;
-}
-
-.tagline {
-  font-style: italic;
-  font-size: 1.1rem;
-  color: #8B5E3C;
-  margin-bottom: 0;
-}
-
-
-
-
-body {
-	display: grid;
-	grid-template-columns: 300px 1fr;
-	grid-template-rows: auto auto 1fr;
-	background-color: #F5ECD7;
-	color:#8B5E3C;
-	font-family: 'Lora', serif;
-	font-size: 18px;
-	line-height: 1.8;
-	gap: 0;
-	column-gap: 0;
+  margin-bottom: 20px;
 }
 
 main {
-	grid-row: 3;
-	grid-column: 2;
-	margin-left: 0 auto;
-	padding: 40px 20px;
-	max-width: 70ch;  
+  grid-row:3;
+  grid-column: 4 / 10;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 0 20px 20px;
+  margin-left: 0 auto;
+  max-width: 60vw;
 }
 
 h1 {
   font-family: 'Playfair Display', serif;
   color: #2C5F2E;
-  font-size: 2.8rem;
+  font-size: 2.2rem;
   letter-spacing: 0.08em;
   margin-bottom: 10px;
 }
@@ -105,13 +104,23 @@ h1 {
 h2 {
   font-family: 'Cormorant Garamond', serif;
   color: #2C5F2E;
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin-bottom: 4px;
   padding-bottom: 2px;
 }
 
+h3 {
+  font-family: 'Lora', serif;
+  color: #F5ECD7;
+  font-size: 1.3rem;
+  font-style: italic;
+  margin-bottom: 4px;
+  text-decoration: underline;
+  text-decoration-color: #F5ECD7;
+}
+
 p {
-  font-size: 1.3rem; 
+  font-size: 1rem; 
   color:#8B5E3C;
   font-family:lora; 
   margin-bottom: 8px;
@@ -160,9 +169,37 @@ ul {
   padding-left: 24px;
 }
 
+aside {
+	grid-row: 3;
+	grid-column: 1 / 4;
+	margin-left: 1rem;
+
+}
+
+aside img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.aside-right {
+  grid-row:3; 
+  grid-column: 10 / 13;
+  margin-right: 20px;
+
+}
+
+.aside-right img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
 footer {
 	grid-row: 4;
-	grid-column: 1/3;
+	grid-column: 1/13;
   background-color: #2C5F2E;
   color: #F5ECD7;
   text-align: center;
@@ -172,8 +209,10 @@ footer {
   margin-top: 60px;
 }
 
+
 footer p {
   margin-bottom: 8px;
+
 }
 
 footer a {
@@ -187,99 +226,16 @@ footer a:hover {
 }
 
 
-@media (max-width: 768px) {
-/* Stack the grid into a single column */
-  body {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-  }
-
-  /* Move nav, header, sidenav, main, footer to single column */
-  nav, header {
-    grid-column: 1;
-  }
-
-  /* Push sidenav below the header, full width */
-  aside {
-    grid-row: 3;
-    grid-column: 1;
-  }
-
-  main {
-    grid-row: 4;
-    grid-column: 1;
-    margin-left: 0;
-  }
-
-  footer {
-    grid-row: 5;
-    grid-column: 1;
-  }
-
-  /* Make sidenav full width on mobile */
-  .sidenav {
-    width: 100%;
-    margin: 0;
-  }
-
-
-  /* Nav bar stacks vertically */
-  .nav-container {
-    flex-direction: column;
-    height: auto;
-    padding: 15px 0;
-    gap: 12px;
-  }
-
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-  }
-
-  /* Hero image shorter on mobile */
-  header {
-    height: 280px;
-  }
-
-  /* Hero text box fits the screen */
-  .hero-text {
-    padding: 20px 24px;
-    margin: 0 16px;
-  }
-
-  /* Smaller heading on mobile */
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  /* Less padding on main content */
-  main {
-    padding: 40px 16px;
-  }
-
-  /* Smaller body text */
-  p, li {
-    font-size: 1.1rem;
-  }
-
-}
 
 
 
 .sidenav {
-	width: 18rem;
 	text-decoration-color: #F5ECD7;
 	z-index: 1; 
 	overflow-x: hidden;
 	padding-top: 1.25rem;
 	padding-left: 0.75rem;
 	margin-top: 1rem;
-	margin-left: 1rem;
 	background:#2C5F2E	
 }
 
@@ -304,14 +260,9 @@ footer a:hover {
   margin-bottom: 16px;
 }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
 
 
-aside {
-	grid-row: 3;
-	grid-column: 1;
-}
+
+
+
 
